@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = 'My Minimal React Webpack Babel Setup';
+const title = 'FossaBnB';
+
+const Components = ({myID}) => {
+  <div className = "my-components">
+    <Photos />
+  </div>
+}
 
 ReactDOM.render(
   <div>{title}</div>,
