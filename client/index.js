@@ -4,12 +4,16 @@ import ReactDOM from 'react-dom';
 const title = 'FossaBnB';
 
 const Components = ({myID}) => {
-  <div className = "my-components">
-    <Photos />
-  </div>
-}
+  return (
+    <div className = "my-components">
+      <Photos myId={2} />
+    </div>
+  )
+};
+
+const myId = URL_Library.getParams('myID');
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <Components myID={myID} />,
   document.getElementById('main-app')
 );
