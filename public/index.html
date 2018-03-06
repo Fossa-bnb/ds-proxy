@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>FossaBnb</title>
+  </head>
+  <body>
+    <div id="photo-gallery"></div>
+    <div id="information"></div>
+    <div id="reviews"></div>
+    <div id="reservations"></div>
+    <script src="http://localhost:3000/dist/bundle.js"></script>
+    <!-- <script src="http://localhost:3001/app.js"></script>
+    <script src="http://localhost:3002/app.js"></script>
+    <script src="http://localhost:3003/app.js"></script> -->
+    <script>
+      ReactDOM.render(
+        React.createElement(window.Photos, {myId : 3}, null),
+        document.getElementById('photo-gallery')
+      );
+    </script>
+  </body>
+</html>

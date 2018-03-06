@@ -3,6 +3,9 @@ const morgan = require('morgan');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 4000;
+const cors = require('cors');
+
+app.use(cors());
 
 app.use(morgan('dev'));
 
@@ -11,6 +14,6 @@ app.use('/', (req, res, next) => {
   next();
 });
 
-app.use(express.static(path.resolve(__dirname, '../')));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.listen(port, () => console.log(`...listening on http://localhost:${port}`));
