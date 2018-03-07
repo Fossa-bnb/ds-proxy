@@ -13,12 +13,13 @@
     <div id="reviews"></div>
     <div id="reservations"></div>
     <script src="http://localhost:3000/dist/bundle.js"></script>
-    <!-- <script src="http://localhost:3001/app.js"></script>
+    <!-- <script src="http://localhost:3001/client/dist/bundle.js"></script>
     <script src="http://localhost:3002/app.js"></script>
     <script src="http://localhost:3003/app.js"></script> -->
     <script>
+      const myId = +window.location.pathname.split('/')[1];
       ReactDOM.render(
-        React.createElement(window.Photos, {myId : 2}, null),
+        React.createElement(window.Photos, {myId : myId}, null),
         document.getElementById('photo-gallery')
       );
     </script>
