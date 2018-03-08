@@ -8,14 +8,14 @@
   </head>
   <body>
     <div id="photo-gallery"></div>
-    <div id="information"></div>
+    <div id="information-1"></div>
     <div id="reviews"></div>
+    <div id="information-2"></div>
     <div id="reservations"></div>
     <script src="http://localhost:3000/dist/bundle.js"></script>
     <script src="http://localhost:3002/dist/bundle.js"></script>
-    <!-- <script src="http://localhost:3001/client/dist/bundle.js"></script>
-    <script src="http://localhost:3002/app.js"></script>
-    <script src="http://localhost:3003/app.js"></script> -->
+    <script src="http://localhost:3001/dist/bundle.js"></script>
+    <script src="http://localhost:3003/public/bundle.js"></script>
     <script>
       const myId = +window.location.pathname.split('/')[1];
       ReactDOM.render(
@@ -25,6 +25,18 @@
       ReactDOM.render(
         React.createElement(window.Reservations, {id : myId}, null),
         document.getElementById('reservations')
+      );
+      ReactDOM.render(
+        React.createElement(window.Reviews, {id: myId}, null),
+        document.getElementById('reviews')
+      );
+      ReactDOM.render(
+        React.createElement(window.InfoPart1, {id: myId}, null),
+        document.getElementById('information-1')
+      );
+      ReactDOM.render(
+        React.createElement(window.InfoPart2, {id: myId}, null),
+        document.getElementById('information-2')
       );
     </script>
   </body>
