@@ -14,30 +14,31 @@
     <div id="reservations"></div>
     <script src="http://localhost:3000/bundle.js"></script>
     <!-- <script src="http://localhost:3002/dist/bundle.js"></script> -->
+    <script src="http://localhost:3008/dist/bundle.js"></script>
     <!-- <script src="http://localhost:3001/dist/bundle.js"></script> -->
-    <!-- <script src="http://localhost:3003/public/bundle.js"></script> -->
+    <script src="http://localhost:3003/public/bundle.js"></script>
     <script>
       const myId = +window.location.pathname.split('/')[1];
       ReactDOM.render(
         React.createElement(window.Photos, {id : myId}, null),
         document.getElementById('photo-gallery')
       );
-      // ReactDOM.render(
-      //   React.createElement(window.Reservations, {id : myId}, null),
-      //   document.getElementById('reservations')
-      // );
+      ReactDOM.render(
+        React.createElement(window.Reservations, {id : myId}, null),
+        document.getElementById('reservations')
+      );
       // ReactDOM.render(
       //   React.createElement(window.Reviews, {id: myId}, null),
       //   document.getElementById('reviews')
       // );
-      // ReactDOM.render(
-      //   React.createElement(window.InfoPart1, {id: myId}, null),
-      //   document.getElementById('information-1')
-      // );
-      // ReactDOM.render(
-      //   React.createElement(window.InfoPart2, {id: myId}, null),
-      //   document.getElementById('information-2')
-      // );
+      ReactDOM.render(
+        React.createElement(window.InfoPart1, {id: myId}, null),
+        document.getElementById('information-1')
+      );
+      ReactDOM.render(
+        React.createElement(window.InfoPart2, {id: myId}, null),
+        document.getElementById('information-2')
+      );
     </script>
   </body>
 </html>
